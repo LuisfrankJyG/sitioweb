@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sitio Web Luis Solano</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<header>
+		<h2 class="logo">LuisfrankJyG</h2>
+		<nav class="navigation">
+			<a href="#">Inicio</a>
+			<a href="sobre mi.html">Sobre mi</a>
+			<a href="servicios.html">Servicios</a>
+			<a href="sobre mi.html">Contactame</a>
+			<button class="btnLogin-popup">Inicia Sesión</button>
+		</nav>
+	</header>
+
+	<div class="wrapper">
+		<span class="icon-close"><ion-icon name="close"></ion-icon></span>
+		<div class="form-box login">
+			<h2>Inicia Sesión</h2>
+			<form action="#">
+				<div class="input-box">
+					<span class="icon"><ion-icon name="mail"></ion-icon></span>
+					<input type="email" required>
+					<label>Correo</label>
+				</div>
+				<div class="input-box">
+					<span class="icon"><ion-icon name="lock"></ion-icon></span>
+					<input type="password" required>
+					<label>Contraseña</label>
+				</div>
+				<div class="remember-forgot">
+					<label><input type="checkbox">Recuerdame</label>
+					<a href="#">¿Olvidaste tu contraseña?</a>
+				</div>
+				<button type="submit" class="btn">Inicia sesión</button>
+				<div class="login-register">
+					<p>¿No tienes una cuenta?<a href="#" class="register-link">Registrate ahora</a></p>
+				</div>
+			</form>
+		</div>
+
+
+		<div class="form-box register">
+			<h2>Registrate</h2>
+			<form action="#">
+				<div class="input-box">
+					<span class="icon"><ion-icon name="person"></ion-icon></span>
+					<input type="text" required>
+					<label>Nombre de usuario</label>
+				</div>
+				<div class="input-box">
+					<span class="icon"><ion-icon name="mail"></ion-icon></span>
+					<input type="email" required>
+					<label>Correo</label>
+				</div>
+				<div class="input-box">
+					<span class="icon"><ion-icon name="lock"></ion-icon></span>
+					<input type="password" required>
+					<label>Contraseña</label>
+				</div>
+				<div class="remember-forgot">
+					<label><input type="checkbox">Acepto los terminos y condiciones</label>
+					
+				</div>
+				<button type="submit" class="btn">Registrame</button>
+				<div class="login-register">
+					<p>¿Ya tienes una cuenta?<a href="#" class="login-link">Ingresa ahora</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const btnPopup = document.querySelector('.btnLogin-popup');
+const iconClose = document.querySelector('.icon-close');
+
+registerLink.addEventListener('click', ()=> {
+	wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click', ()=> {
+	wrapper.classList.remove('active');
+});
+
+btnPopup.addEventListener('click', ()=> {
+	wrapper.classList.add('active-popup');
+});
+iconClose.addEventListener('click', ()=> {
+	wrapper.classList.remove('active-popup');
+});
+	</script>
+	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
